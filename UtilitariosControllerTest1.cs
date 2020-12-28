@@ -26,7 +26,6 @@ namespace DIO_Armazen_TESTES
         {
             var servico = new UtilitariosController(_mockContext.Object);
             await servico.GetUtilitario(32);
-
             _mockSet.Verify(mymck => mymck.FindAsync(32), Times.Once());
 
         }
